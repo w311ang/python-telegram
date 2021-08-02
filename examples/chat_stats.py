@@ -73,6 +73,13 @@ if __name__ == '__main__':
         phone=args.phone,
         database_encryption_key='changeme1234',
     )
+    tg.call_method(
+        'setOption',
+        {
+            'name': 'prefer_ipv6',
+            'value': {'@type': 'optionValueBoolean', 'value': False},
+        },
+    )
     # you must call login method before others
     tg.login()
 
