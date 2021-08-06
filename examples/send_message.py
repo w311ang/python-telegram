@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
     # `tdlib` is asynchronous, so `python-telegram` always returns you an `AsyncResult` object.
     # You can wait for a result with the blocking `wait` method.
-    result.wait()
+    #result.wait()
 
     if result.error:
         print(f'get chats error: {result.error_info}')
@@ -58,6 +58,8 @@ if __name__ == '__main__':
         chat_id=args.chat_id,
         text=args.text,
     )
+
+    #result.wait()
 
     if result.error:
         print(f'send message error: {result.error_info}')
