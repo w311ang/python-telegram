@@ -3,6 +3,7 @@ import sys
 import time
 
 
+os.chdir('/opt/python-telegram)
 with open('config.txt') as f:
   lines=f.read().splitlines()
   for count,line in enumerate(lines,1):
