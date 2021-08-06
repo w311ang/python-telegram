@@ -59,7 +59,6 @@ if __name__ == '__main__':
         text=args.text,
     )
 
-    result.wait()
     if result.error:
         print(f'send message error: {result.error_info}')
     else:
