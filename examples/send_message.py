@@ -1,5 +1,6 @@
 import logging
 import argparse
+import time
 
 from utils import setup_logging
 from telegram.client import Telegram
@@ -48,6 +49,7 @@ if __name__ == '__main__':
     # `tdlib` is asynchronous, so `python-telegram` always returns you an `AsyncResult` object.
     # You can wait for a result with the blocking `wait` method.
     #result.wait()
+    time.sleep(5)
 
     if result.error:
         print(f'get chats error: {result.error_info}')
@@ -60,6 +62,7 @@ if __name__ == '__main__':
     )
 
     #result.wait()
+    time.sleep(5)
 
     if result.error:
         print(f'send message error: {result.error_info}')
