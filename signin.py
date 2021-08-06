@@ -18,7 +18,7 @@ with open('config.txt') as f:
     text=list[4]
     print('%s=====%s====='%('' if count==1 else '\n',count))
     if len(sys.argv)>1 and sys.argv[1]=='check':
-      os.system("python3 examples/chat_stat.py %s %s '%s' %s"%(apiid,apihash,phone,chatid))
+      os.system("python3 examples/chat_stats.py %s %s '%s' %s"%(apiid,apihash,phone,chatid))
     else:
       os.system("python3 examples/send_message.py %s %s '%s' %s '%s'"%(apiid,apihash,phone,chatid,text))
     time.sleep(10)
