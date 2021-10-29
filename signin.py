@@ -1,9 +1,9 @@
 import os
 import sys
 import time
+import pathlib
 
-
-os.chdir('/opt/python-telegram/')
+os.chdir(pathlib.Path(__file__).parent.resolve())
 with open('config.txt') as f:
   lines=f.read().splitlines()
   for count,line in enumerate(lines,1):
