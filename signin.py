@@ -2,11 +2,16 @@ import os
 import sys
 import time
 import pathlib
+import random
 
 os.chdir(pathlib.Path(__file__).parent.resolve())
 with open('config.txt') as f:
   lines=f.read().splitlines()
   for count,line in enumerate(lines,1):
+    if (not 'notime' in sys.argv) and count!=1:
+      randomSleepMin=random.randint(10,20)
+      print('休息%s分钟'%randomSleepMin)
+      time.sleep(randomSleepMin*60)
     if line[0]=='#':
       continue
     list=line.split()
