@@ -2,6 +2,21 @@
 Changelog
 =========
 
+[0.18.0] - 2023-03-13
+
+- Added support for tdlib > 1.8.5. (thanks to @JleMyP)
+
+[0.17.0] - 2023-01-25
+
+- Added ``import_contacts`` method. (thanks to @vlad-lf)
+- Added markup support. It is now possible to send formatted text (html/markdown and telegram-specific formats, for example hidden spoiler styling)  (thanks to @SKY-ALIN)
+
+[0.16.0] - 2022-08-18
+
+- Search for the system library first, and fallback to the embedded one if the system was not found.
+- Fixed the finding system library mechanism (thanks to @weirdo-neutrino)
+- tdlib v1.8.5
+
 [0.15.0] - 2021-12-03
 
 - tdlib v1.7.9. Fixes ``UPDATE_APP_TO_LOGIN`` errors.
